@@ -25,7 +25,10 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
 
 
-let team = document.getElementById("team");
+const nomeTeam = document.getElementsByClassName("nome");
+
+const professioniTeam = document.getElementsByClassName("professione");
+const imgTeam = document.getElementsByClassName("immagini");
 
 
 
@@ -84,11 +87,19 @@ for (let i = 0; i < elTeam.length; i++) {
     let objesimo = elTeam[i];
     // console.log(objesimo);
     
+
+    nomeTeam.innerHTML += objesimo.nome;
+    
+
+    // MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+/*
     for (let chiaveObj in objesimo) {
 
         team.innerHTML += objesimo[chiaveObj] + " ";
         console.log(objesimo[chiaveObj]);
-    }
+    }  */
 }
 
 
