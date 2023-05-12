@@ -25,10 +25,8 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
 
 
-const nomeTeam = document.getElementsByClassName("nome");
+const nomeTeam = document.getElementById("nome");
 
-const professioniTeam = document.getElementsByClassName("professione");
-const imgTeam = document.getElementsByClassName("immagini");
 
 
 
@@ -87,9 +85,10 @@ for (let i = 0; i < elTeam.length; i++) {
     let objesimo = elTeam[i];
     // console.log(objesimo);
     
-
-    nomeTeam.innerHTML += objesimo.nome;
     
+    let nomeUser = `<div class="flex-div"><span>${objesimo.nome}</span> <span>${objesimo.posizione}</span> <img src="img/${objesimo.foto}"></div>`;
+    nomeTeam.innerHTML += nomeUser;
+   
 
     // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
