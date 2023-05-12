@@ -25,6 +25,9 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
 
 
+let team = document.getElementById("team");
+
+
 
 // MILESTONE 0:
 // Creare l’array di oggetti con le informazioni fornite.
@@ -33,31 +36,31 @@ const elTeam = [
     { 
         nome: "Wayne Barnett",
         posizione: "Chief Editor",
-        foto: "wayne-barnett-founder-ceo.jpg",
+        foto: "wayne-barnett-founder-ceo.jpg"
     },
 
     { 
         nome: "Angela Caroll",
         posizione: "Founder & CEO",
-        foto: "angela-caroll-chief-editor.jpg",
+        foto: "angela-caroll-chief-editor.jpg"
     },
 
     { 
         nome: "Walter Gordon",
         posizione: "Office Manager",
-        foto: "walter-gordon-office-manager.jpg",
+        foto: "walter-gordon-office-manager.jpg"
     },
 
     { 
         nome: "Angela Lopez",
         posizione: "Social Media Manager",
-        foto: "angela-lopez-social-media-manager.jpg",
+        foto: "angela-lopez-social-media-manager.jpg"
     },
 
     { 
         nome: "Scott Estrada",
         posizione: "Developer",
-        foto: "scott-estrada-developer.jpg",
+        foto: "scott-estrada-developer.jpg"
     },
 
     { 
@@ -65,7 +68,29 @@ const elTeam = [
         posizione: "Graphic Designer",
         foto: "barbara-ramos-graphic-designer.jpg"
     }
-]
+];
 
 
-console.log(elTeam);
+// console.log(elTeam);
+
+
+
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
+
+for (let i = 0; i < elTeam.length; i++) {
+
+    let objesimo = elTeam[i];
+    // console.log(objesimo);
+    
+    for (let chiaveObj in objesimo) {
+
+        team.innerHTML += objesimo[chiaveObj] + " ";
+        console.log(objesimo[chiaveObj]);
+    }
+}
+
+
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
